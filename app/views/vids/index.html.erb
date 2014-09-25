@@ -5,7 +5,7 @@
     <% @vids.each do |vid| %>
       <tr>
         <td><%= vid.title %></td>
-        <td><%= vid.link %></td>
+        <td><%= vid.link.html_safe %></td>
         <td><%= link_to 'Show', vid %></td>
         <td><%= link_to 'Edit', edit_vid_path(vid) %></td>
 		<td><%= link_to 'Destroy', vid, method: :delete, data: { confirm: 'SURE NOT?!?' } %></td>
