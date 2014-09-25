@@ -1,0 +1,19 @@
+<h1>Sexy vids here</h1>
+<h2>WATCH SOME</h2>
+<table>
+  <tbody>
+    <% @vids.each do |vid| %>
+      <tr>
+        <td><%= vid.title %></td>
+        <td><%= vid.link %></td>
+        <td><%= link_to 'Show', vid %></td>
+        <td><%= link_to 'Edit', edit_vid_path(vid) %></td>
+		<td><%= link_to 'Destroy', vid, method: :delete, data: { confirm: 'SURE NOT?!?' } %></td>
+	   </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Video?', new_vid_path %>
